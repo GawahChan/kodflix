@@ -1,25 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import martianlogo from './The_Martian_image.jpg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            <h1>Welcome to Kodflix!!!</h1>
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <img src={martianlogo} alt='The Martian Logo'/>
       </div>
     );
   }
