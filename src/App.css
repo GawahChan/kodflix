@@ -3,5 +3,13 @@
 }
 
 img{
-  width: 100%;
+  width: 25%;
+}
+
+.TVShowTitles {
+  display: flex;
+}
+
+.show {
+  flex: 1;
 }
