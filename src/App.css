@@ -3,7 +3,7 @@
 }
 
 img{
-  width: 25%;
+  width: 65%;
 }
 
 .TVShowTitles {
@@ -12,4 +12,5 @@ img{
 
 .show {
   flex: 1;
+  padding: 5px;
 }
