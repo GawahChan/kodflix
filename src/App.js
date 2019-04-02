@@ -14,23 +14,41 @@ class App extends Component {
         <div className="TVShowTitles">
           <div className="show">
             <img src={BlackMirrorCover} alt='The Black Mirror Cover' />
+            <div className="Overlay">
+              <h1>BlackMirror</h1>
+            </div>
           </div>
           <div className="show">
             <img src={BreakingBadCover} alt='The Breaking Bad Cover' />
+            <div className="Overlay">
+              <h1>BreakingBad</h1>
+            </div>
           </div>
           <div className="show">
             <img src={DeathNoteCover} alt='The Death note Cover' />
+            <div className="Overlay">
+              <h1>Death Note</h1>
+            </div>
           </div>
         </div>
         <div className="TVShowTitles">
           <div className="show">
             <img src={GameOfThronesCover} alt='The Game of Thrones Cover' />
+            <div className="Overlay">
+              <h1>Game of Thrones</h1>
+            </div>
           </div>
           <div className="show">
             <img src={WalkingDeadCover} alt='The Walking Dead Cover' />
+            <div className="Overlay">
+              <h1>The Walking Dead</h1>
+            </div>
           </div>
           <div className="show">
             <img src={TheWireCover} alt='The Wire Cover' />
+            <div className="Overlay">
+              <h1>The Wire</h1>
+            </div>
           </div>
         </div>
       </div>
