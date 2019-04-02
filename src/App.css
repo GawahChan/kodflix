@@ -15,20 +15,22 @@ img{
   padding: 30px;
   border: 1px solid green;
   position: relative;
+  overflow: hidden;
 }
 
 .Overlay {
-  display: none;
+  transition: bottom, ease, 1s;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 0;
   width: 100%;
-  background-color: white ;
-  opacity: .5;
+  background-color: green ;
+  opacity: 0.5;
 }
 
 .show:hover .Overlay{
-  display: block;
+  opacity: 10;
+  bottom: 0px;
 }
 
 @media only screen and (max-width: 600px) {
