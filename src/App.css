@@ -7,11 +7,15 @@ img{
 }
 
 .TVShowTitles {
-  display: flex;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .show {
-  flex: 1;
+  /* flex: 1; */
+  /* flex-basis: 120px; */
   padding: 30px;
   border: 1px solid green;
   position: relative;
@@ -21,7 +25,7 @@ img{
 .Overlay {
   transition: bottom, ease, 1s;
   position: absolute;
-  bottom: -100px;
+  bottom: -200px;
   left: 0;
   width: 100%;
   background-color: green ;
@@ -31,12 +35,4 @@ img{
 .show:hover .Overlay{
   opacity: 10;
   bottom: 0px;
-}
-
-@media only screen and (max-width: 600px) {
-
-.TVShowTitles{
-  flex-direction: column;  
-  }
-
 }
