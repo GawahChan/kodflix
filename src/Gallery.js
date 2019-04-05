@@ -14,7 +14,6 @@ export default function Gallery() {
               logo={stack.logo}
             />))
             }
-          }
         </div>
       </div>
     );
