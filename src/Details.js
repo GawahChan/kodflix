@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link , Redirect} from 'react-router-dom';
 import getGallery from './Gallery-get.js';
 
 export default class Details extends Component {
@@ -19,11 +19,14 @@ export default class Details extends Component {
   }
 
   render() {
-    return (
+    if (this.state.show.name === undefined) {
+     return <Redirect to='/NotFound' />
+    } else {
+      return (
       <div>
         <h1>{this.state.show.name}</h1>
         <Link to='/'><h3>Back to home page</h3></Link>
       </div>
-    );
+      )}
   }
 }
