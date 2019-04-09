@@ -7,15 +7,11 @@ img{
 }
 
 .TVShowTitles {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .show {
-  /* flex: 1; */
-  /* flex-basis: 120px; */
   padding: 30px;
   border: 1px solid green;
   position: relative;
