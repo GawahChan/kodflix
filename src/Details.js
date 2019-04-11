@@ -19,7 +19,7 @@ export default class Details extends Component {
   }
 
   render() {
-    if (this.state.show.name === undefined) {
+    if (this.state.show === undefined) {
      return <Redirect to='/NotFound' />
     } else {
       return (
