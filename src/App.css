@@ -1,5 +1,20 @@
-.App {
-  text-align: center;
+.HomePage {
+  background-color: rgb(32, 32, 37);
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 150px auto;
+  grid-template-areas: 
+  "header header" 
+  "shows shows";
+}
+
+.Header {
+grid-area: header;
+background-color: rgb(32, 32, 37);
+text-align: center;
+align-self: center;
+color: red;
+font-size: 200%
 }
 
 img{
@@ -7,13 +22,14 @@ img{
 }
 
 .TVShowTitles {
+  background-color: rgb(32, 32, 37);
+  grid-area: shows;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
 }
 
 .show {
-  padding: 30px;
-  border: 1px solid green;
+  padding: 5px;
   position: relative;
   overflow: hidden;
 }
@@ -22,13 +38,15 @@ img{
   transition: bottom, ease, 1s;
   position: absolute;
   bottom: -200px;
-  left: 0;
+  left: 0px;
   width: 100%;
-  background-color: green ;
-  opacity: 0.5;
+  text-align: center;
+  color: red;
+  background-color: rgb(32, 32, 37);
+  opacity: 0.9;
 }
 
 .show:hover .Overlay{
-  opacity: 10;
   bottom: 0px;
+  opacity: 0.9;
 }

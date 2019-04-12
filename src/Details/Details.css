@@ -1,0 +1,37 @@
+.DetailsPage {
+    background-color: rgb(32, 32, 37);
+    display: grid;
+    grid-template-columns: 10% 30% auto;
+    grid-template-rows: 150px auto;
+    grid-template-areas:    "header header textheader"                   
+                            "text text image";
+}
+
+
+a {
+    color: red;
+    text-decoration: none;
+  }
+  
+.DetailsPage .text {
+    padding: 30px;
+    grid-area: text;
+    background-color: rgb(32, 32, 37);
+    color: whitesmoke;
+    text-align: center;
+}
+
+.DetailsPage .textheader {
+    grid-area: textheader;
+    color: whitesmoke;
+    text-align: center;
+    align-self: center;
+    font-size: 150%
+}
+
+.DetailsPage .image {
+    grid-area: image;
+    width: 100%
+}
+
+
