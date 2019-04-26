@@ -15,7 +15,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-backend": "nodemon src/backend/app.js",
-    "start-all": "./node_modules/.bin/npm-run-all"
+    "start-all": "npx npm-run-all -p "
   },
   "eslintConfig": {
     "extends": "react-app"
