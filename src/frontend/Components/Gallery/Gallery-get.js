@@ -1,9 +1,9 @@
-import BlackMirrorCover from './images/Black_Mirror_cover.jpg';
-import BreakingBadCover from './images/Breaking_Bad_cover.jpg';
-import DeathNoteCover from './images/Death_Note_cover.jpg';
-import GameOfThronesCover from './images/Game_Of_Thrones_cover.jpg';
-import TheWireCover from './images/The_Wire_cover.jpg';
-import WalkingDeadCover from './images/Walking_Dead_cover.jpg';
+import BlackMirrorCover from '../../images/Black_Mirror_cover.jpg';
+import BreakingBadCover from '../../images/Breaking_Bad_cover.jpg';
+import DeathNoteCover from '../../images/Death_Note_cover.jpg';
+import GameOfThronesCover from '../../images/Game_Of_Thrones_cover.jpg';
+import TheWireCover from '../../images/The_Wire_cover.jpg';
+import WalkingDeadCover from '../../images/Walking_Dead_cover.jpg';
 
 export default function getGallery() {
   return [

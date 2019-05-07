@@ -1,7 +1,8 @@
 import React from 'react';
-import Stack from './Stack.js';
+import Stack from '../../Components/Stack';
 import { Link } from 'react-router-dom';
-import getGallery from './Gallery-get.js';
+import getGallery from '../../Components/Gallery/Gallery-get';
+import './Gallery.css';
 
 class Gallery extends React.Component {
   constructor() {
