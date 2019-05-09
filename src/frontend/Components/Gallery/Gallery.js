@@ -1,5 +1,5 @@
 import React from 'react';
-import Stack from '../../Components/Stack';
+import Cover from './Cover/Cover';
 import { Link } from 'react-router-dom';
 import getGallery from '../../Components/Gallery/Gallery-get';
 import './Gallery.css';
@@ -26,7 +26,7 @@ class Gallery extends React.Component {
         </div>
         <div className="TVShowTitles">{
           getGallery().map(stack => (
-            <Stack
+            <Cover
               key={stack.id}
               id={stack.id}
               name={stack.name}
