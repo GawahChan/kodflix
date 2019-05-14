@@ -25,7 +25,7 @@ export default class Details extends Component {
     let show = this.state.show;
     if (show) {
       return show.id ?
-        <DetailsContent brexit={show} /> :
+        <DetailsContent TvShow={show} /> :
         <div />
     } else {
       return <Redirect to='/not-found' />
@@ -33,22 +33,22 @@ export default class Details extends Component {
   }
 }
 
-function DetailsContent({ brexit }) {
+function DetailsContent({ TvShow }) {
   return (
     <div className="DetailsPage">
       <div className="Header">
         <Link to='/'><h1>KODFLIX</h1></Link>
       </div>
       <div className="textheader">
-        <h1>{brexit.name}</h1>
+        <h1>{TvShow.name}</h1>
       </div>
       <div className="text">
-        <p>{brexit.details}</p>
-        <p>{brexit.awards}</p>
-        <p>{brexit.castDetails}</p>
-        <p>{brexit.Director}</p>
+        <p>{TvShow.details}</p>
+        <p>{TvShow.awards}</p>
+        <p>{TvShow.castDetails}</p>
+        <p>{TvShow.Director}</p>
       </div>
-      <img src={require(`../../images/${brexit.id}.jpg`)} alt={brexit.id} className="image" />
+      <img src={require(`../../images/${TvShow.id}.jpg`)} alt={TvShow.id} className="image" />
     </div>
   )
 }
