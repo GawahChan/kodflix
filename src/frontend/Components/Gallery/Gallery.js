@@ -24,11 +24,11 @@ class Gallery extends React.Component {
           <Link to='/'><h1>KODFLIX</h1></Link>
         </div>
         <div className="TVShowTitles">{
-          this.state.shows.map(stack => (
+          this.state.shows.map(show => (
             <Cover
-              key={stack.id}
-              id={stack.id}
-              name={stack.name}
+              key={show.id}
+              id={show.id}
+              name={show.name}
             />))
         }
         </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Cover(stack) {
+export default function Cover(show) {
     return (
-    <Link to={`/${stack.id}`} className="show">
-        <img src={require(`../../../images/${stack.id}.jpg`)} alt={`${stack.name} logo`} />
+    <Link to={`/${show.id}`} className="show">
+        <img src={require(`../../../images/${show.id}.jpg`)} alt={`${show.name} logo`} />
         <div className="Overlay">
-            <h1>{stack.name}</h1>
+            <h1>{show.name}</h1>
         </div>
     </Link>
     );
