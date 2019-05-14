@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom';
-import getGallery from '../Gallery/Gallery-get.js';
 import '../Details/Details.css';
 
 export default class Details extends Component {
@@ -14,9 +13,23 @@ export default class Details extends Component {
 
   componentDidMount() {
     let showId = this.props.match.params.showId;
-    let show = getGallery()
-      .find((show) => show.id === showId);
-    this.setState({ show });
+    fetch('/rest/shows')
+      .then(res => res.json())
+      .then(shows => {
+        return shows
+          .find(show => {
+            return show.id === showId
+          })
+      })
+      .then(show => {
+        const {name, details, awards, castDetails, Director} = show;
+        this.setState({
+        name: name,
+        details: details,
+        awards: awards,
+        castDetails: castDetails,
+        Director: Director
+      })})
   }
 
   render() {
@@ -29,17 +42,15 @@ export default class Details extends Component {
             <Link to='/'><h1>KODFLIX</h1></Link>
           </div>
           <div className="textheader">
-            <h1>{this.state.show.name}</h1>
+            <h1>{this.state.name}</h1>
           </div>
           <div className="text">
-            <p>{this.state.show.details}</p>
-            <br />
-            <p>{this.state.show.awards}</p>
-            <br /><br />
-            <div>{this.state.show.castDetails}</div>
-            <div>{this.state.show.Director}</div>
+            <p>{this.state.details}</p>
+            <p>{this.state.awards}</p>
+            <p>{this.state.castDetails}</p>
+            <p>{this.state.Director}</p>
           </div>
-          <img src={this.state.show.logo} alt={this.state.show.name} className="image" />
+          <img src={require(`./../../images/${this.props.match.params.showId}.jpg`)} alt={this.props.match.params.showId} className="image" />
         </div>
       )
     }
