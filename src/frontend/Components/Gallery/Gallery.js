@@ -2,11 +2,12 @@ import React from 'react';
 import Cover from './Cover/Cover';
 import { Link } from 'react-router-dom';
 import './Gallery.css';
+import Loading from "../../Common/Loading/Loading"
 
 class Gallery extends React.Component {
   constructor() {
     super();
-    this.state= {
+    this.state = {
       shows: []
     }
   }
@@ -14,7 +15,7 @@ class Gallery extends React.Component {
   componentDidMount() {
     fetch('/rest/shows')
       .then(res => res.json())
-      .then(shows => this.setState ({ shows }));
+      .then(shows => this.setState({ shows }));
   }
 
   render() {
@@ -24,12 +25,16 @@ class Gallery extends React.Component {
           <Link to='/'><h1>KODFLIX</h1></Link>
         </div>
         <div className="TVShowTitles">{
-          this.state.shows.map(show => (
-            <Cover
-              key={show.id}
-              id={show.id}
-              name={show.name}
-            />))
+          this.state.shows.length ?
+            this.state.shows.map(show => {
+              return (
+                <Cover
+                  key={show.id}
+                  id={show.id}
+                  name={show.name}
+                />);
+            }) :
+            <Loading />
         }
         </div>
       </div>

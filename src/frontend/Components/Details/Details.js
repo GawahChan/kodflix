@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom';
 import '../Details/Details.css';
+import Loader from '../../Common/Loading/Loading';
 
 export default class Details extends Component {
 
@@ -26,7 +27,7 @@ export default class Details extends Component {
     if (show) {
       return show.id ?
         <DetailsContent TvShow={show} /> :
-        <div />
+        <Loader/>
     } else {
       return <Redirect to='/not-found' />
     }
@@ -48,7 +49,7 @@ function DetailsContent({ TvShow }) {
         <p>{TvShow.castDetails}</p>
         <p>{TvShow.Director}</p>
       </div>
-      <img src={require(`../../images/${TvShow.id}.jpg`)} alt={TvShow.id} className="image" />
+      <img src={require(`../../Common/images/${TvShow.id}.jpg`)} alt={TvShow.id} className="image" />
     </div>
   )
 }
