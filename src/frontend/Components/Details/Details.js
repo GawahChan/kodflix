@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom';
 import '../Details/Details.css';
-import Loader from '../../Common/Loading/Loading';
+import Loading from '../../Common/Loading/Loading';
 
 export default class Details extends Component {
 
@@ -27,7 +27,7 @@ export default class Details extends Component {
     if (show) {
       return show.id ?
         <DetailsContent TvShow={show} /> :
-        <Loader />
+        <Loading />
     } else {
       return <Redirect to='/not-found' />
     }
