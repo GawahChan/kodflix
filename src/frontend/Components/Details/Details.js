@@ -27,7 +27,7 @@ export default class Details extends Component {
     if (show) {
       return show.id ?
         <DetailsContent TvShow={show} /> :
-        <Loader/>
+        <Loader />
     } else {
       return <Redirect to='/not-found' />
     }
@@ -36,20 +36,22 @@ export default class Details extends Component {
 
 function DetailsContent({ TvShow }) {
   return (
-    <div className="DetailsPage">
-      <div className="Header">
+    <div className="DetailsPage-Container">
+      <div className="DetailsPage-Header">
         <Link to='/'><h1>KODFLIX</h1></Link>
       </div>
-      <div className="textheader">
-        <h1>{TvShow.name}</h1>
+      <h2>{TvShow.name}</h2>
+      <div className="DetailsPage-Body">
+        <div className="Show-Description">
+          <p>{TvShow.details}</p>
+          <p>{TvShow.awards}</p>
+          <p>{TvShow.castDetails}</p>
+          <p>{TvShow.Director}</p>
+        </div>
+        <div className="Show-Image">
+          <img src={require(`../../Common/images/${TvShow.id}.jpg`)} alt={TvShow.id} className="image" />
+        </div>
       </div>
-      <div className="text">
-        <p>{TvShow.details}</p>
-        <p>{TvShow.awards}</p>
-        <p>{TvShow.castDetails}</p>
-        <p>{TvShow.Director}</p>
-      </div>
-      <img src={require(`../../Common/images/${TvShow.id}.jpg`)} alt={TvShow.id} className="image" />
     </div>
   )
 }

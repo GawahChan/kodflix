@@ -1,37 +1,54 @@
-.DetailsPage {
-    background-color: rgb(32, 32, 37);
-    display: grid;
-    grid-template-columns: 10% 30% auto;
-    grid-template-rows: 150px auto;
-    grid-template-areas:    "header header textheader"                   
-                            "text text image";
+.DetailsPage-Container {
+    background-color:  rgb(32, 32, 37);
+    text-align: center;
+    height: auto;
 }
 
+.DetailsPage-Header {
+    padding: 1em;
+    background-color: rgb(25, 25, 25);
+}
 
-a {
+.DetailsPage-Header h1 {
     color: red;
-    text-decoration: none;
-  }
-  
-.DetailsPage .text {
-    padding: 30px;
-    grid-area: text;
-    background-color: rgb(32, 32, 37);
-    color: whitesmoke;
-    text-align: center;
+    font-size: 250%;
 }
 
-.DetailsPage .textheader {
-    grid-area: textheader;
-    color: whitesmoke;
-    text-align: center;
-    align-self: center;
-    font-size: 150%
+.DetailsPage-Container h2 {
+    color: white;
+    font-size: 250%;
 }
 
-.DetailsPage .image {
-    grid-area: image;
-    width: 100%
+.DetailsPage-Body {
+    display: flex;
+    padding: 1em;
 }
 
+.Show-Description {
+    flex: 1;
+    color: white;
+    margin: 0.5em;
+}
 
+.Show-Image {
+    flex: 1;
+    margin: 0.5em;
+    padding: 1em
+}
+
+.Show-Image img {
+    width: 100%;
+    height: 35em;
+}
+
+@media only screen and (min-width: 1440px) {
+    .DetailsPage-Container {
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .DetailsPage-Body {
+        flex-direction: column;
+    }
+}

@@ -20,7 +20,7 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <div className="HomePage">
+      <div className="HomePage-container">
         <div className="Header">
           <Link to='/'><h1>KODFLIX</h1></Link>
         </div>
