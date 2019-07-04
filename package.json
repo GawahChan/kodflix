@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "mongodb": "^3.2.7",
     "nodemon": "^1.19.0",
@@ -13,7 +15,7 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "npm-run-all -s build start-backend",
+    "start": "cross-env NODE_ENV=production npm-run-all -s build start-backend",
     "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/backend/app.js",
     "start-dev": "npm-run-all -p start-db start-frontend start-backend",

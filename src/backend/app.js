@@ -7,7 +7,7 @@ const db = require('./db');
 db.connect().then(dbo => {
     app.get('/rest/shows', (req, res) => {
         dbo.collection('shows').find({}).toArray(function(err, result) {
-            if (err) throw err;  //if there's an error, stop process and generate error message
+            if (err) throw err; 
             res.send(result);
         });
     });
