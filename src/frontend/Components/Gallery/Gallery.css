@@ -6,12 +6,12 @@
 .Header {
 background-color: rgb(25, 25, 25);
 text-align: center;
+padding: 1em
 }
 
 .Header h1 {
   color: red;
-  font-size: 350%;
-  padding: 0.5em;
+  font-size: 250%;
   margin: 0;
 }
 
