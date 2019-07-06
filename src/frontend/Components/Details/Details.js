@@ -13,14 +13,22 @@ export default class Details extends Component {
   }
 
   componentDidMount() {
-    fetch('/rest/shows')
+    let showId = this.props.match.params.showId;
+    fetch(`/rest/shows/${showId}`)
       .then(res => res.json())
-      .then(shows => {
-        let showId = this.props.match.params.showId;
-        let show = shows.find(show => show.id === showId);
-        this.setState({ show });
-      })
+      .then(show => this.setState({ show }));
+
   }
+
+  // componentDidMount() {
+  //   fetch('/rest/shows')
+  //     .then(res => res.json())
+  //     .then(shows => {
+  //       let showId = this.props.match.params.showId;
+  //       let show = shows.find(show => show.id === showId);
+  //       this.setState({ show });
+  //     })
+  // }
 
   render() {
     let show = this.state.show;
