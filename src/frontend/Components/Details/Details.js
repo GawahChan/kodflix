@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import '../Details/Details.css';
 import Loading from '../../Common/Loading/Loading';
+import Header from '../Header/Header';
 
 export default class Details extends Component {
 
@@ -35,19 +36,16 @@ export default class Details extends Component {
 function DetailsContent({ TvShow }) {
   return (
     <div className="DetailsPage-Container">
-      <div className="DetailsPage-Header">
-        <Link to='/'><h1>KODFLIX</h1></Link>
-      </div>
-      <h2>{TvShow.name}</h2>
-      <div className="DetailsPage-Body">
-        <div className="Show-Description">
+      <Header />
+      <div className="DetailsPage-Body" style={{
+        'backgroundImage': `url(${require(`../../Common/images/covers/${TvShow.id}.jpg`)})`
+      }}>
+        <div className="DetailsPage-Content">
+          <h2>{TvShow.name}</h2>
           <p>{TvShow.details}</p>
           <p>{TvShow.awards}</p>
           <p>{TvShow.castDetails}</p>
           <p>{TvShow.Director}</p>
-        </div>
-        <div className="Show-Image">
-          <img src={require(`../../Common/images/${TvShow.id}.jpg`)} alt={TvShow.id} className="image" />
         </div>
       </div>
     </div>

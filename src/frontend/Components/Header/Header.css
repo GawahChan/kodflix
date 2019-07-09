@@ -1,0 +1,10 @@
+.header {
+    font-size: 250%;
+    font-weight: 500;
+    background-color: rgb(25, 25, 25);
+    text-align: center;
+    padding: 10px;
+}
+.header a {
+    color: red;
+}

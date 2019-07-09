@@ -1,38 +1,18 @@
 .DetailsPage-Container {
-    background-color:  rgb(32, 32, 37);
     text-align: center;
-}
-
-.DetailsPage-Header {
-    padding: 0.5em;
-    background-color: rgb(25, 25, 25);
-}
-
-.DetailsPage-Header h1 {
-    color: red;
-    font-size: 250%;
-}
-
-.DetailsPage-Container h2 {
-    color: white;
-    font-size: 250%;
+    height: 100%;
 }
 
 .DetailsPage-Body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 0.5em
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
 
-.Show-Description {
+.DetailsPage-Content {
+    padding:2em;    
     color: white;
-    padding: 0.5em
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    min-height: 100vh;
 }
 
-.Show-Image {
-    padding: 0.5em;
-}
-
-.Show-Image img {
-    width: 100%;
-}

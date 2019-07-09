@@ -1,8 +1,9 @@
 import React from 'react';
 import Cover from './Cover/Cover';
-import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 import './Gallery.css';
 import Loading from "../../Common/Loading/Loading"
+
 
 class Gallery extends React.Component {
   constructor() {
@@ -21,9 +22,7 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className="HomePage-container">
-        <div className="Header">
-          <Link to='/'><h1>KODFLIX</h1></Link>
-        </div>
+        <Header />
         <div className="TVShowTitles">{
           this.state.shows.length ?
             this.state.shows.map(show => {
