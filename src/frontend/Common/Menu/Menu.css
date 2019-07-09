@@ -9,17 +9,19 @@
     padding-top: 15px;
     padding-left: 10px;
     border: none;
+    animation: none;
 }
 
 .menu-panel {
     position: absolute;
     top: 0;
-    left: -500px;
+    left: -350px;
     padding-top: 40px;
     background-color: rgba(0,0,0,0.8);
     width: 325px;
     height: 100%;
     z-index: -1;
+    transition: left 1s ease;
 }
 .menu-options { 
     color: white;
@@ -34,7 +36,22 @@
 
 .menu.is-visible .menu-panel {
     left: 0;
+    transition: left 1s ease;
 }
 
+.menu-button:hover {
+    animation: pulse 4s infinite;
+}
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
