@@ -4,18 +4,8 @@
   height: 100vh;
 }
 
-.Header {
-  background-color: rgb(25, 25, 25);
-  padding: 1em
-}
-
-.Header h1 {
-  color: red;
-  font-size: 250%;
-  margin: 0;
-}
-
 .TVShowTitles {
+  min-height: 100vh;
   background-color: rgb(32, 32, 37);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
