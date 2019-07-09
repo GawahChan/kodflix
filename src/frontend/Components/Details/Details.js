@@ -36,7 +36,7 @@ function DetailsContent({ TvShow }) {
   return (
     <div className="DetailsPage-Container">
       <div className="DetailsPage-Body" style={{
-        'backgroundImage': `url(${require(`../../Common/images/covers/${TvShow.id}.jpg`)})`
+        'backgroundImage': `url(${require(`../../Common/images/wallpaper/${TvShow.id}.jpg`)})`
       }}>
         <div className="DetailsPage-Content">
           <h1>{TvShow.name}</h1>
