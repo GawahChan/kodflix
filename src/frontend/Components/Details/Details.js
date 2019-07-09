@@ -40,7 +40,7 @@ function DetailsContent({ TvShow }) {
         'backgroundImage': `url(${require(`../../Common/images/covers/${TvShow.id}.jpg`)})`
       }}>
         <div className="DetailsPage-Content">
-          <h2>{TvShow.name}</h2>
+          <h1>{TvShow.name}</h1>
           <p>{TvShow.details}</p>
           <p>{TvShow.awards}</p>
           <p>{TvShow.castDetails}</p>

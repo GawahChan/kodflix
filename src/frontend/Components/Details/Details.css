@@ -1,6 +1,5 @@
 .DetailsPage-Container {
     text-align: center;
-    height: 100%;
 }
 
 .DetailsPage-Body {
@@ -10,7 +9,7 @@
 }
 
 .DetailsPage-Content {
-    padding:2em;    
+    padding: 1rem;    
     color: white;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     min-height: 100vh;
