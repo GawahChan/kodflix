@@ -19,6 +19,10 @@
     background-color: rgb(32, 32, 37);
     opacity: 0.9;
   }
+
+  .Overlay h1 {
+    font-weight: 500;
+  }
   
 .show:hover .Overlay{
     bottom: 0px;

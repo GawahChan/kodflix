@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import '../Details/Details.css';
 import Loading from '../../Common/Loading/Loading';
-import Header from '../Header/Header';
 
 export default class Details extends Component {
 

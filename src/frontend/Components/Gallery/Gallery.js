@@ -1,6 +1,5 @@
 import React from 'react';
 import Cover from './Cover/Cover';
-import Header from '../Header/Header';
 import './Gallery.css';
 import Loading from "../../Common/Loading/Loading"
 
