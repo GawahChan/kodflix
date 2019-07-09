@@ -22,7 +22,6 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className="HomePage-container">
-        <Header />
         <div className="TVShowTitles">{
           this.state.shows.length ?
             this.state.shows.map(show => {

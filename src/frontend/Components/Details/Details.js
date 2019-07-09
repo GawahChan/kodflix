@@ -36,7 +36,6 @@ export default class Details extends Component {
 function DetailsContent({ TvShow }) {
   return (
     <div className="DetailsPage-Container">
-      <Header />
       <div className="DetailsPage-Body" style={{
         'backgroundImage': `url(${require(`../../Common/images/covers/${TvShow.id}.jpg`)})`
       }}>
