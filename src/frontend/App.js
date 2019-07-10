@@ -8,9 +8,6 @@ import Gallery from './Components/Gallery/Gallery';
 import NotFound from './Not-Found.js';
 import './App.css';
 
-//constructor can be used to bind event handlers to the component, not just setting initial state
-//withRouter gives the app component three props: history, location, match
-//history.listen method is called each time a user changes URL
 class App extends Component {
   constructor({ location, history }) {
     super();

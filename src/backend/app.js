@@ -4,7 +4,6 @@ const port = process.env.PORT || 3001;
 const path = require('path');
 const db = require('./db');
 
-//everything wrapped around db.connect
 db.connect().then(dbo => {
     app.get('/rest/shows', (req, res) => {
         dbo.collection('shows').find({}).toArray(function (err, result) {
@@ -13,9 +12,6 @@ db.connect().then(dbo => {
         });
     });
 
-    //req is an object containing information about the HTTP request 
-    //res sends back the desired HTTP response
-
     app.get('/rest/shows/:id', (req, res) => {
         dbo.collection('shows').findOne({ id: req.params.id }, (err, result) => {
             if (err) throw err;
@@ -23,10 +19,8 @@ db.connect().then(dbo => {
         });
     });
 
-    // Serve any static files
     app.use(express.static(path.join(__dirname, '../../build')));
 
-    // Handle React routing, return all requests to React App
     app.get('*', function (req, res) {
         res.sendFile(path.join(__dirname, '../../build', 'index.html'));
     });
