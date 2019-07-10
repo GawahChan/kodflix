@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import MenuIcon from './Menu.svg';
 import './Menu.css';
 
@@ -22,7 +23,7 @@ class Menu extends Component {
                 </button>
                 <div className="menu-panel">
                     <div className="menu-options">
-                        <h1>Hello Menu</h1>
+                        <Link to='/'><h1>Home</h1></Link>
                     </div>
                 </div>
             </div>
