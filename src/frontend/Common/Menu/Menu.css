@@ -7,7 +7,7 @@
 .menu-button {
     background-color: transparent;
     padding-top: 15px;
-    padding-left: 10px;
+    padding-left: 13px;
     border: none;
     animation: none;
 }
@@ -25,12 +25,8 @@
 }
 .menu-options { 
     color: white;
-    padding: 10px;
+    padding: 0.5rem;
     height: 100%
-}
-
-.menu-options a {
-    color: white;
 }
 
 .menu.is-visible {

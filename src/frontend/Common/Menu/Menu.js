@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import MenuIcon from './Menu.svg';
 import './Menu.css';
+import MenuLink from './MenuLink/MenuLink';
 
 class Menu extends Component {
     constructor() {
@@ -23,7 +23,7 @@ class Menu extends Component {
                 </button>
                 <div className="menu-panel">
                     <div className="menu-options">
-                        <Link to='/'><h1>Home</h1></Link>
+                        <MenuLink to="/" text="Home" icon="Home" onClick={() => this.toggleMenu()}/>
                     </div>
                 </div>
             </div>

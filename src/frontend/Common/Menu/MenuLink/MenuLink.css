@@ -1,0 +1,13 @@
+.MenuLink {
+    display: flex;
+    color: white;
+}
+
+.MenuLink img {
+    width: 2rem;
+    padding: 0.5rem;
+}
+
+.MenuLink h1 {
+    font-size: 2rem;
+}
