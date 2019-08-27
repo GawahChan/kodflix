@@ -27,7 +27,7 @@ export default class Details extends Component {
         <DetailsContent TvShow={show} /> :
         <Loading />
     } else {
-      return <Redirect to='/not-found' />
+      return <Redirect to='/NotFound' />
     }
   }
 }
