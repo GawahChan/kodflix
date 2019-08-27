@@ -6,6 +6,8 @@
     min-height: 100vh;
     background-position: center;
     background-size: cover;
+    
+    
 }
 
 .DetailsPage-Content {
@@ -15,3 +17,29 @@
     min-height: 100vh;
 }
 
+.DetailsPage-Video {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 100px 0px 100px 150px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.6);
+    background: transparent;
+    cursor: pointer;
+}
+
+.DetailsPage-Video:hover {
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

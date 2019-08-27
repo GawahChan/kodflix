@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import '../Details/Details.css';
 import Loading from '../../Common/Loading/Loading';
 
@@ -44,6 +44,9 @@ function DetailsContent({ TvShow }) {
           <p>{TvShow.awards}</p>
           <p>{TvShow.castDetails}</p>
           <p>{TvShow.Director}</p>
+          <Link to={`/${TvShow.id}/play`}>
+            <button className="DetailsPage-Video"></button>
+          </Link>
         </div>
       </div>
     </div>
