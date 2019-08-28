@@ -16,7 +16,8 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production npm-run-all -s build start-backend",
+    "start": "node ./src/backend/app.js",
+    "start-prod": "cross-env NODE_ENV=production npm-run-all -s build start-backend",
     "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/backend/app.js",
     "start-dev": "npm-run-all -p start-db start-frontend start-backend",
