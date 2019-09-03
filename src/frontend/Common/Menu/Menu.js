@@ -23,7 +23,7 @@ class Menu extends Component {
                 </button>
                 <div className="menu-panel">
                     <div className="menu-options">
-                        <MenuLink to="/" text="Home" icon="Home" onClick={() => this.toggleMenu()}/>
+                        <MenuLink to="/" text="Home" icon="Home" onClick={() => this.toggleMenu()} />
                     </div>
                 </div>
             </div>

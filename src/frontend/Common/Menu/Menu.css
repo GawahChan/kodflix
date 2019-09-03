@@ -6,10 +6,11 @@
 
 .menu-button {
     background-color: transparent;
-    padding-top: 15px;
+    padding-top: 23px;
     padding-left: 13px;
     border: none;
     animation: none;
+    outline: 0;
 }
 
 .menu-panel {
@@ -41,6 +42,7 @@
 
 .menu-button:hover {
     animation: pulse 4s infinite;
+    cursor: pointer;
 }
 
 @keyframes pulse {
@@ -48,7 +50,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.15);
+        transform: scale(1.05);
     }
     100% {
         transform: scale(1);

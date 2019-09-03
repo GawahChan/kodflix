@@ -1,11 +1,9 @@
 .header {
-    
-    font-size: 250%;
+    font-size: 300%;
     font-weight: 600;
     background-color: rgb(25, 25, 25);
     text-align: center;
     padding: 0.5rem;
-
 }
 .header a {
     color: red;

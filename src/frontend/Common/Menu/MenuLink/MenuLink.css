@@ -1,6 +1,7 @@
 .MenuLink {
     display: flex;
     color: white;
+    padding-top: 0.5rem;
 }
 
 .MenuLink img {
@@ -9,5 +10,5 @@
 }
 
 .MenuLink h1 {
-    font-size: 2rem;
+    font-weight: 500;
 }
