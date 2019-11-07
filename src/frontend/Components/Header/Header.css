@@ -1,8 +1,15 @@
 .header {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+
   font-size: 300%;
   font-weight: 600;
   text-align: center;
+
+  box-sizing: border-box;
   padding: 0.5rem;
+  z-index: 1;
 }
 .header a {
   color: red;

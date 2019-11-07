@@ -1,59 +1,58 @@
 .menu {
-    position: fixed;
-    z-index: 1;
-    min-height: 100%;
+  position: fixed;
+  z-index: 2;
+  min-height: 100%;
 }
 
 .menu-button {
-    background-color: transparent;
-    padding-top: 23px;
-    padding-left: 13px;
-    border: none;
-    animation: none;
-    outline: 0;
+  background-color: transparent;
+  padding-top: 23px;
+  padding-left: 13px;
+  border: none;
+  animation: none;
+  outline: 0;
 }
 
 .menu-panel {
-    position: absolute;
-    top: 0;
-    left: -350px;
-    padding-top: 40px;
-    background-color: rgba(0,0,0,0.8);
-    width: 325px;
-    height: 100%;
-    z-index: -1;
-    transition: left 1s ease;
+  position: absolute;
+  top: 0;
+  left: -350px;
+  padding-top: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 325px;
+  height: 100%;
+  z-index: -1;
+  transition: left 1s ease;
 }
-.menu-options { 
-    color: white;
-    padding: 0.5rem;
-    height: 100%
+.menu-options {
+  color: white;
+  padding: 0.5rem;
+  height: 100%;
 }
 
 .menu.is-visible {
-    width: 100%;
-    background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .menu.is-visible .menu-panel {
-    left: 0;
-    transition: left 1s ease;
+  left: 0;
+  transition: left 1s ease;
 }
 
 .menu-button:hover {
-    animation: pulse 4s infinite;
-    cursor: pointer;
+  animation: pulse 4s infinite;
+  cursor: pointer;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-

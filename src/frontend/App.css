@@ -1,4 +1,7 @@
-
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.app {
+  padding-top: 4rem;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import { withRouter, Route, Switch} from 'react-router-dom';
+import { withRouter, Route, Switch } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Menu from './Common/Menu/Menu';
 import Details from './Components/Details/Details';
@@ -15,7 +15,7 @@ class App extends Component {
     console.log('props passed', location, history);
     ReactGA.initialize('UA-143339499-1');
     this.trackPageView(location);
-    history.listen((location) => this.trackPageView(location));
+    history.listen(location => this.trackPageView(location));
   }
 
   trackPageView(location) {
@@ -24,17 +24,19 @@ class App extends Component {
 
   render() {
     return (
-        <div className="App">
-          <Menu />
-          <Header />
+      <div>
+        <Menu />
+        <Header />
+        <div className="app">
           <Switch>
-            <Route exact path='/' component={Gallery} />
-            <Route exact path='/NotFound' component={NotFound} />
-            <Route exact path='/:showId/play' component={Play} />
-            <Route exact path='/:showId' component={Details} />
+            <Route exact path="/" component={Gallery} />
+            <Route exact path="/NotFound" component={NotFound} />
+            <Route exact path="/:showId/play" component={Play} />
+            <Route exact path="/:showId" component={Details} />
           </Switch>
         </div>
-    )
+      </div>
+    );
   }
 }
 export default withRouter(App);
